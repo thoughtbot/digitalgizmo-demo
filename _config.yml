@@ -1,0 +1,10 @@
+title: DigitalGizmo Demo
+description: Intro to Bourbon, Neat, Bitters, and Refills
+
+port: 4001 
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+exclude:
+  - README
