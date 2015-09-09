@@ -2,6 +2,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="/stylesheets/application.css">
   </head>
   <body>
@@ -14,13 +15,39 @@
       <nav class="main-navigation">
         <ul class="main-navigation--items">
           <li class="main-navigation--item"><a href="">Home</a></li>
-          <li><a href="">Museum</a></li>
-          <li><a href="">Search</a></li>
-          <li><a href="">Resource</a></li>
-          <li><a href="">Lessons</a></li>
-          <li><a href="">Community</a></li>
-          <li><a href="">Events</a></li>
-          <li ><a href="">About</a></li>
+          <li class="main-navigation--item dropdown">
+            <a href="#" class="dropdown-button">Museum</a>
+
+            <div class="dropdown-menu">
+              <ul class="dropdown-list">
+                <li class="dropdown-list--item"><a href="">Articfact</a></li>
+                <li class="dropdown-list--item"><a href="">LIving</a></li>
+                <li class="dropdown-list--item"><a href="">Active</a></li>
+                <li class="dropdown-list--item"><a href="">Lectures</a></li>
+                <li class="dropdown-list--item"><a href="">Interviews</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="main-navigation--item"><a href="">Search</a></li>
+          <li class="main-navigation--item"><a href="">Resource</a></li>
+          <li class="main-navigation--item"><a href="">Lessons</a></li>
+          <li class="main-navigation--item"><a href="">Community</a></li>
+          <li class="main-navigation--item"><a href="">Events</a></li>
+
+          <li class="main-navigation--item dropdown">
+            <a href="#" class="dropdown-button">About</a>
+
+            <div class="dropdown-menu">
+              <ul class="dropdown-list">
+                <li class="dropdown-list--item"><a href="">addres</a></li>
+                <li class="dropdown-list--item"><a href="">MSE</a></li>
+                <li class="dropdown-list--item"><a href="">Communit</a></li>
+                <li class="dropdown-list--item"><a href="">somethign</a></li>
+                <li class="dropdown-list--item"><a href="">Interviews</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -43,19 +70,35 @@
     </header>
 
     <section class="main-content">
-      <section class="search">
-        <h2>Search</h2>
-        <p>127 Artifact Articles</p>
+      <aside class="main-aside">
+        <section class="call-out search">
+          <h2 class="call-out--title">Search</h2>
+          <p>127 Artifact Articles</p>
 
-        <nav>
-          <h3>Sort By</h3>
-          <ul>
-            <li>Title</li>
-            <li>Item's Date</li>
-          </ul>
-          <input type="search" name="" id="" value="" />
-        </nav>
-      </section>
+          <nav>
+            <h3>Sort By</h3>
+            <ul>
+              <li>Title</li>
+              <li>Item's Date</li>
+            </ul>
+            <input type="search" name="" id="" value="" />
+          </nav>
+        </section>
+
+        <section class="call-out">
+          <h2 class="call-out--title special">Articfact facts</h3>
+          <p>127 Artifact Articles</p>
+
+          <nav>
+            <h3>Sort By</h3>
+            <ul>
+              <li>Title</li>
+              <li>Item's Date</li>
+            </ul>
+            <input type="search" name="" id="" value="" />
+          </nav>
+        </section>
+      </aside>
 
       <section class="articles-wrapper">
         <ul class="articles">
@@ -99,5 +142,15 @@
       </section>
 
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $(".dropdown-button").click(function() {
+          // $("this").siblings(".dropdown-menu").toggleClass("show-menu");
+          $(".dropdown-menu").toggleClass("show-menu");
+        });
+      });
+    </script>
   </body>
 </html>
