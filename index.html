@@ -13,42 +13,46 @@
         <h1 class="logo--text">Mystic Seaport for Educators</h1>
       </div>
       <nav class="main-navigation">
-        <ul class="main-navigation--items">
-          <li class="main-navigation--item"><a href="">Home</a></li>
-          <li class="main-navigation--item dropdown">
-            <a href="#" class="dropdown-button">Museum</a>
+        <div class="main-navigation--wrapper">
+          <div class="menu-toggle">
+            <a href="#">Menu</a>
+          </div>
+          <ul class="main-navigation--items">
+            <li class="main-navigation--item"><a href="">Home</a></li>
+            <li class="main-navigation--item dropdown">
+              <a href="#" class="dropdown-button">Museum</a>
 
-            <div class="dropdown-menu">
-              <ul class="dropdown-list">
-                <li class="dropdown-list--item"><a href="">Articfact</a></li>
-                <li class="dropdown-list--item"><a href="">LIving</a></li>
-                <li class="dropdown-list--item"><a href="">Active</a></li>
-                <li class="dropdown-list--item"><a href="">Lectures</a></li>
-                <li class="dropdown-list--item"><a href="">Interviews</a></li>
-              </ul>
-            </div>
-          </li>
+              <div class="dropdown-menu">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list--item"><a href="">Articfact</a></li>
+                  <li class="dropdown-list--item"><a href="">LIving</a></li>
+                  <li class="dropdown-list--item"><a href="">Active</a></li>
+                  <li class="dropdown-list--item"><a href="">Lectures</a></li>
+                  <li class="dropdown-list--item"><a href="">Interviews</a></li>
+                </ul>
+              </div>
+            </li>
 
-          <li class="main-navigation--item"><a href="">Search</a></li>
-          <li class="main-navigation--item"><a href="">Resource</a></li>
-          <li class="main-navigation--item"><a href="">Lessons</a></li>
-          <li class="main-navigation--item"><a href="">Community</a></li>
-          <li class="main-navigation--item"><a href="">Events</a></li>
+            <li class="main-navigation--item"><a href="">Search</a></li>
+            <li class="main-navigation--item"><a href="">Resource</a></li>
+            <li class="main-navigation--item"><a href="">Lessons</a></li>
+            <li class="main-navigation--item"><a href="">Community</a></li>
 
-          <li class="main-navigation--item dropdown">
-            <a href="#" class="dropdown-button">About</a>
+            <li class="main-navigation--item dropdown">
+              <a href="#" class="dropdown-button">About</a>
 
-            <div class="dropdown-menu">
-              <ul class="dropdown-list">
-                <li class="dropdown-list--item"><a href="">addres</a></li>
-                <li class="dropdown-list--item"><a href="">MSE</a></li>
-                <li class="dropdown-list--item"><a href="">Communit</a></li>
-                <li class="dropdown-list--item"><a href="">somethign</a></li>
-                <li class="dropdown-list--item"><a href="">Interviews</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+              <div class="dropdown-menu">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list--item"><a href="">addres</a></li>
+                  <li class="dropdown-list--item"><a href="">MSE</a></li>
+                  <li class="dropdown-list--item"><a href="">Communit</a></li>
+                  <li class="dropdown-list--item"><a href="">somethign</a></li>
+                  <li class="dropdown-list--item"><a href="">Interviews</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -140,15 +144,18 @@
           </li>
         </ul>
       </section>
-
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function(){
         $(".dropdown-button").click(function() {
-          // $("this").siblings(".dropdown-menu").toggleClass("show-menu");
-          $(".dropdown-menu").toggleClass("show-menu");
+          // $(".dropdown-menu:visible").slideUp();
+          $(this).siblings().slideToggle();
+        });
+
+        $(".menu-toggle a").click(function() {
+          $(".main-navigation--items").slideToggle();
         });
       });
     </script>
